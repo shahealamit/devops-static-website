@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Justpedia.us | Expert Professional Services - Legal, Medical, CA & More</title>
+    <meta name="description" content="Justpedia.us connects you with verified experts in Law, Medicine, Finance, HR, and Marketing. Your one-stop destination for professional consultancy.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(14, 165, 233, 0.3); }
+            50% { box-shadow: 0 0 30px rgba(14, 165, 233, 0.5); }
+        }
+        
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .pulse-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+        
+        .service-card:hover .service-image {
+            transform: scale(1.1);
+        }
+        
+        .testimonial-slider {
+            scroll-behavior: smooth;
+            scrollbar-width: none; /* Firefox */
+        }
+        
+        .testimonial-slider::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, Edge */
+        }
+    </style>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f172a',    // Slate 900 (Primary Background)
+                            primary: '#334155', // Slate 700
+                            accent: '#0ea5e9',  // Sky 500 (Highlights)
+                            success: '#10b981', // Emerald (Trust/Growth)
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s ease-in-out infinite',
+                        'bounce-slow': 'bounce 2s infinite',
+                        'spin-slow': 'spin 8s linear infinite',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-slate-600 bg-slate-50 antialiased selection:bg-brand-accent selection:text-white">
+
+    <nav class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="container mx-auto px-6 h-20 flex justify-between items-center">
+            
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="w-10 h-10 bg-gradient-to-br from-brand-dark to-brand-accent text-white rounded-lg flex items-center justify-center text-lg font-bold shadow-lg transition-transform group-hover:scale-105 pulse-glow">
+                    JP
+                </div>
+                <span class="text-2xl font-bold text-slate-800 tracking-tight">Justpedia<span class="text-brand-accent">.us</span></span>
+            </a>
+
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#" class="text-slate-600 hover:text-brand-accent font-semibold text-sm uppercase tracking-wide transition hover:scale-105">Home</a>
+                <a href="#services" class="text-slate-600 hover:text-brand-accent font-semibold text-sm uppercase tracking-wide transition hover:scale-105">Services</a>
+                <a href="#why-us" class="text-slate-600 hover:text-brand-accent font-semibold text-sm uppercase tracking-wide transition hover:scale-105">Why Us</a>
+                <a href="#testimonials" class="text-slate-600 hover:text-brand-accent font-semibold text-sm uppercase tracking-wide transition hover:scale-105">Testimonials</a>
+                <a href="#contact" class="text-slate-600 hover:text-brand-accent font-semibold text-sm uppercase tracking-wide transition hover:scale-105">Contact</a>
+            </div>
+
+            <div class="hidden lg:block">
+                <a href="#contact" class="px-6 py-2.5 bg-gradient-to-r from-brand-dark to-brand-accent hover:from-brand-accent hover:to-brand-accent/90 text-white font-semibold rounded-full transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-sky-500/30 hover:scale-105">
+                    Book Now
+                </a>
+            </div>
+
+            <button class="lg:hidden text-2xl text-slate-700 hover:text-brand-accent transition">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="relative bg-brand-dark pt-20 pb-32 overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-slate-800 to-transparent opacity-50"></div>
+        <div class="absolute -top-24 -right-24 w-96 h-96 bg-brand-accent/20 rounded-full blur-3xl animate-spin-slow"></div>
+        <div class="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-slate-700 to-transparent"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center fade-in-up">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800 border border-slate-700 text-brand-accent text-sm font-semibold mb-8 animate-pulse-slow">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span>
+                    </span>
+                    Verified Experts in Every Field
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight mb-8">
+                    Expertise You Can Trust.<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-accent to-brand-success">Solutions You Need.</span>
+                </h1>
+                
+                <p class="text-lg text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                    From legal counsel to medical advice, corporate consultancy to career guidance. Justpedia connects you with top-tier professionals seamlessly.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="#services" class="px-8 py-4 bg-gradient-to-r from-brand-accent to-cyan-500 hover:from-cyan-500 hover:to-brand-accent text-white font-bold rounded-lg transition-all duration-300 shadow-xl shadow-sky-900/20 hover:shadow-2xl hover:scale-105">
+                        Explore Services
+                    </a>
+                    <a href="#contact" class="px-8 py-4 bg-slate-800/80 hover:bg-slate-700 text-white font-bold rounded-lg transition-all duration-300 border border-slate-700 hover:border-brand-accent hover:scale-105">
+                        Speak to an Expert
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-slate-50 relative -mt-16">
+        <div class="container mx-auto px-6">
+            
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Our Professional Services</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-brand-accent to-brand-success mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-600 max-w-2xl mx-auto">Comprehensive consultancy solutions delivered by certified industry leaders.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                <!-- Medical Services -->
+                <div class="group service-card bg-white p-0 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Medical Services" 
+                             class="service-image w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-red-600/70 to-transparent"></div>
+                        <div class="absolute top-4 left-4 w-14 h-14 bg-white text-red-500 rounded-xl flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-user-doctor"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-red-600 transition">Medical Services</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4">Consult with top specialists, get second opinions, and access healthcare guidance.</p>
+                        <div class="flex gap-2">
+                            <a href="#contact" class="flex-1 px-4 py-2 bg-red-50 hover:bg-red-100 text-red-600 font-medium text-sm rounded-lg transition text-center">
+                                Book Now
+                            </a>
+                            <a href="#" class="flex-1 px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-sm rounded-lg transition text-center">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Legal Services -->
+                <div class="group service-card bg-white p-0 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1589391886085-8b6b0ac72a1a?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Legal Services" 
+                             class="service-image w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-amber-600/70 to-transparent"></div>
+                        <div class="absolute top-4 left-4 w-14 h-14 bg-white text-amber-600 rounded-xl flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-scale-balanced"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-amber-600 transition">Legal Services</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4">Expert lawyers for civil, criminal, corporate law, and documentation support.</p>
+                        <div class="flex gap-2">
+                            <a href="#contact" class="flex-1 px-4 py-2 bg-amber-50 hover:bg-amber-100 text-amber-600 font-medium text-sm rounded-lg transition text-center">
+                                Book Now
+                            </a>
+                            <a href="#" class="flex-1 px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-sm rounded-lg transition text-center">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chartered Accountant -->
+                <div class="group service-card bg-white p-0 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Chartered Accountant" 
+                             class="service-image w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-emerald-600/70 to-transparent"></div>
+                        <div class="absolute top-4 left-4 w-14 h-14 bg-white text-emerald-600 rounded-xl flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-emerald-600 transition">Chartered Accountant</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4">Tax planning, auditing, financial reporting, and business compliance services.</p>
+                        <div class="flex gap-2">
+                            <a href="#contact" class="flex-1 px-4 py-2 bg-emerald-50 hover:bg-emerald-100 text-emerald-600 font-medium text-sm rounded-lg transition text-center">
+                                Book Now
+                            </a>
+                            <a href="#" class="flex-1 px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-sm rounded-lg transition text-center">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HR & Recruitment -->
+                <div class="group service-card bg-white p-0 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1551836026-d5c2c5af78e4?q=80&w=1000&auto=format&fit=crop" 
+                             alt="HR & Recruitment" 
+                             class="service-image w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-600/70 to-transparent"></div>
+                        <div class="absolute top-4 left-4 w-14 h-14 bg-white text-blue-600 rounded-xl flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-users-viewfinder"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition">HR & Recruitment</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4">Talent acquisition, payroll management, and corporate HR policy structuring.</p>
+                        <div class="flex gap-2">
+                            <a href="#contact" class="flex-1 px-4 py-2 bg-blue-50 hover:bg-blue-100 text-blue-600 font-medium text-sm rounded-lg transition text-center">
+                                Book Now
+                            </a>
+                            <a href="#" class="flex-1 px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-sm rounded-lg transition text-center">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div class="group service-card bg-white p-0 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Digital Marketing" 
+                             class="service-image w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-purple-600/70 to-transparent"></div>
+                        <div class="absolute top-4 left-4 w-14 h-14 bg-white text-purple-600 rounded-xl flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-bullhorn"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-purple-600 transition">Digital Marketing</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4">SEO, social media strategy, branding, and performance marketing solutions.</p>
+                        <div class="flex gap-2">
+                            <a href="#contact" class="flex-1 px-4 py-2 bg-purple-50 hover:bg-purple-100 text-purple-600 font-medium text-sm rounded-lg transition text-center">
+                                Book Now
+                            </a>
+                            <a href="#" class="flex-1 px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-sm rounded-lg transition text-center">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corporate Consultancy -->
+                <div class="group service-card bg-white p-0 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Corporate Consultancy" 
+                             class="service-image w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-700/70 to-transparent"></div>
+                        <div class="absolute top-4 left-4 w-14 h-14 bg-white text-slate-600 rounded-xl flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-slate-700 transition">Corporate Consultancy</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4">Business strategy, startup mentoring, operations scaling, and management.</p>
+                        <div class="flex gap-2">
+                            <a href="#contact" class="flex-1 px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-sm rounded-lg transition text-center">
+                                Book Now
+                            </a>
+                            <a href="#" class="flex-1 px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 font-medium text-sm rounded-lg transition text-center">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education & Career -->
+                <div class="group service-card bg-white p-0 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Education & Career" 
+                             class="service-image w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-pink-600/70 to-transparent"></div>
+                        <div class="absolute top-4 left-4 w-14 h-14 bg-white text-pink-500 rounded-xl flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-pink-500 transition">Education & Career</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4">Student counseling, university admissions, and professional career path guidance.</p>
+                        <div class="flex gap-2">
+                            <a href="#contact" class="flex-1 px-4 py-2 bg-pink-50 hover:bg-pink-100 text-pink-600 font-medium text-sm rounded-lg transition text-center">
+                                Book Now
+                            </a>
+                            <a href="#" class="flex-1 px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-sm rounded-lg transition text-center">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Insurance Advisory Services -->
+                <div class="group service-card bg-white p-0 rounded-2xl shadow-sm hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:-translate-y-2 overflow-hidden">
+                    <div class="relative overflow-hidden h-48">
+                        <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?q=80&w=1000&auto=format&fit=crop" 
+                             alt="Insurance Advisory Services" 
+                             class="service-image w-full h-full object-cover transition-transform duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-orange-600/70 to-transparent"></div>
+                        <div class="absolute top-4 left-4 w-14 h-14 bg-white text-orange-500 rounded-xl flex items-center justify-center text-2xl">
+                            <i class="fa-solid fa-passport"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-slate-900 mb-2 group-hover:text-orange-500 transition">Insurance Advisory Services</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed mb-4">Personalized insurance solutions for complete financial protection.</p>
+                        <div class="flex gap-2">
+                            <a href="#contact" class="flex-1 px-4 py-2 bg-orange-50 hover:bg-orange-100 text-orange-600 font-medium text-sm rounded-lg transition text-center">
+                                Book Now
+                            </a>
+                            <a href="#" class="flex-1 px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-700 font-medium text-sm rounded-lg transition text-center">
+                                Learn More
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" class="py-20 bg-gradient-to-br from-slate-50 to-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="text-brand-accent font-bold uppercase tracking-wider text-sm">Why Choose Us?</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">The Justpedia Advantage</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-brand-accent to-brand-success mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-600 max-w-2xl mx-auto">Discover what makes us the preferred choice for professional consultancy worldwide.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:-translate-y-2 hover:border-brand-accent/30 overflow-hidden relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-accent to-brand-success"></div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-50 to-blue-100 text-blue-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Premium Experts</h3>
+                    <p class="text-slate-500 leading-relaxed">All professionals are vetted for credentials with minimum 10+ years of industry experience.</p>
+                    <div class="mt-6 pt-6 border-t border-slate-100">
+                        <span class="text-sm font-semibold text-blue-600">99% Client Satisfaction</span>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:-translate-y-2 hover:border-brand-accent/30 overflow-hidden relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-accent to-brand-success"></div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-50 to-green-100 text-green-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Quick Response</h3>
+                    <p class="text-slate-500 leading-relaxed">Connect with experts within 24 hours. Urgent queries get response in under 2 hours.</p>
+                    <div class="mt-6 pt-6 border-t border-slate-100">
+                        <span class="text-sm font-semibold text-green-600">Avg. Response: 4.2 hrs</span>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:-translate-y-2 hover:border-brand-accent/30 overflow-hidden relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-accent to-brand-success"></div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-50 to-purple-100 text-purple-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Secure & Confidential</h3>
+                    <p class="text-slate-500 leading-relaxed">End-to-end encrypted consultations. Your data and conversations remain private.</p>
+                    <div class="mt-6 pt-6 border-t border-slate-100">
+                        <span class="text-sm font-semibold text-purple-600">Bank-Level Security</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:-translate-y-2 hover:border-brand-accent/30 overflow-hidden relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-accent to-brand-success"></div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-amber-50 to-amber-100 text-amber-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                        <i class="fa-solid fa-handshake"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Satisfaction Guarantee</h3>
+                    <p class="text-slate-500 leading-relaxed">Not satisfied? Get a full refund within 7 days. We stand by our service quality.</p>
+                    <div class="mt-6 pt-6 border-t border-slate-100">
+                        <span class="text-sm font-semibold text-amber-600">100% Money Back</span>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:-translate-y-2 hover:border-brand-accent/30 overflow-hidden relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-accent to-brand-success"></div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-50 to-cyan-100 text-cyan-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                        <i class="fa-solid fa-globe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Global Network</h3>
+                    <p class="text-slate-500 leading-relaxed">Access to experts across 50+ countries. Local knowledge with global perspective.</p>
+                    <div class="mt-6 pt-6 border-t border-slate-100">
+                        <span class="text-sm font-semibold text-cyan-600">50+ Countries</span>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="group bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-slate-100 hover:-translate-y-2 hover:border-brand-accent/30 overflow-hidden relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-accent to-brand-success"></div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-pink-50 to-pink-100 text-pink-600 rounded-2xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-500">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">24/7 Support</h3>
+                    <p class="text-slate-500 leading-relaxed">Round-the-clock customer support via chat, email, and phone for all your queries.</p>
+                    <div class="mt-6 pt-6 border-t border-slate-100">
+                        <span class="text-sm font-semibold text-pink-600">Always Available</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in-up">
+                <span class="text-brand-accent font-bold uppercase tracking-wider text-sm">Client Stories</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-2 mb-4">What Our Clients Say</h2>
+                <div class="w-16 h-1 bg-gradient-to-r from-brand-accent to-brand-success mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-600 max-w-2xl mx-auto">Join thousands of satisfied clients who found expert solutions through Justpedia.</p>
+            </div>
+
+            <!-- Testimonial Slider -->
+            <div class="testimonial-slider flex overflow-x-auto snap-x snap-mandatory gap-6 pb-6 px-2">
+                <!-- Testimonial 1 -->
+                <div class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] snap-center">
+                    <div class="bg-gradient-to-br from-slate-50 to-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=1000&auto=format&fit=crop" 
+                                     alt="Sarah Johnson" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-slate-900">Sarah Johnson</h4>
+                                <p class="text-sm text-slate-500">CEO, TechFlow Solutions</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 italic mb-6">"Justpedia connected us with an excellent corporate lawyer who helped us navigate complex international expansion. The service was prompt and professional."</p>
+                        <div class="flex text-amber-400">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] snap-center">
+                    <div class="bg-gradient-to-br from-slate-50 to-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=1000&auto=format&fit=crop" 
+                                     alt="Michael Chen" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-slate-900">Michael Chen</h4>
+                                <p class="text-sm text-slate-500">Startup Founder</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 italic mb-6">"The CA services saved us thousands in tax planning. The expert was incredibly knowledgeable about startup tax benefits we didn't even know existed."</p>
+                        <div class="flex text-amber-400">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="min-w-full md:min-w-[calc(50%-12px)] lg:min-w-[calc(33.333%-16px)] snap-center">
+                    <div class="bg-gradient-to-br from-slate-50 to-white p-8 rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-slate-100">
+                        <div class="flex items-center mb-6">
+                            <div class="w-16 h-16 rounded-full overflow-hidden border-4 border-white shadow-lg">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop" 
+                                     alt="Priya Sharma" 
+                                     class="w-full h-full object-cover">
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-slate-900">Priya Sharma</h4>
+                                <p class="text-sm text-slate-500">Medical Student</p>
+                            </div>
+                        </div>
+                        <p class="text-slate-600 italic mb-6">"The career guidance I received was life-changing. The counselor helped me choose the right specialization and connected me with mentors in my field."</p>
+                        <div class="flex text-amber-400">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slider Controls -->
+            <div class="flex justify-center mt-8 gap-2">
+                <button class="w-3 h-3 rounded-full bg-slate-300 hover:bg-brand-accent transition"></button>
+                <button class="w-3 h-3 rounded-full bg-slate-300 hover:bg-brand-accent transition"></button>
+                <button class="w-3 h-3 rounded-full bg-slate-300 hover:bg-brand-accent transition"></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="relative py-24 bg-gray-900 overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1920&auto=format&fit=crop')] bg-cover bg-center opacity-30"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-gray-900/80"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Need an Emergency Repair??</h2>
+            <p class="text-xl text-gray-300 mb-10 max-w-2xl mx-auto">Book Now  with our experts today and experience the RepairGuru difference. Fast, reliable, and guaranteed.</p>
+            
+            <a href="#" class="inline-block px-10 py-5 bg-brand-light hover:bg-brand-blue text-white text-lg font-bold rounded-full transition transform hover:scale-105 shadow-2xl shadow-blue-500/50">
+                Book Now
+            </a>
+            
+            <!-- <p class="mt-6 text-gray-400 text-sm">Or call us directly: <a href="tel:+1234567890" class="text-white hover:underline font-semibold">+1 (800) 123-4567</a></p> -->
+        </div>
+    </section>
+
+    <!-- Footer --> 
+    <footer class="bg-slate-900 text-slate-400 pt-16 pb-8 border-t border-slate-800">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            <div>
+                <a href="#" class="text-2xl font-bold text-white mb-6 block">Justpedia.us</a>
+                <p class="text-sm leading-relaxed mb-6">Your trusted partner for accessing world-class professional services across medical, legal, and financial domains.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-accent hover:text-white transition transform hover:-translate-y-1">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-accent hover:text-white transition transform hover:-translate-y-1">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-accent hover:text-white transition transform hover:-translate-y-1">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-brand-accent hover:text-white transition transform hover:-translate-y-1">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-6 text-lg">Quick Links</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-brand-accent transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs"></i> About Us</a></li>
+                    <li><a href="#services" class="hover:text-brand-accent transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs"></i> Our Services</a></li>
+                    <li><a href="#" class="hover:text-brand-accent transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs"></i> Become an Expert</a></li>
+                    <li><a href="#contact" class="hover:text-brand-accent transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs"></i> Contact Support</a></li>
+                    <li><a href="#" class="hover:text-brand-accent transition flex items-center gap-2"><i class="fa-solid fa-chevron-right text-xs"></i> Careers</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-6 text-lg">Top Services</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-brand-accent transition flex items-center gap-2"><i class="fa-solid fa-gavel text-xs"></i> Legal Consultancy</a></li>
+                    <li><a href="#" class="hover:text-brand-accent transition flex items-center gap-2"><i class="fa-solid fa-user-doctor text-xs"></i> Medical Appointments</a></li>
+                    <li><a href="#" class="hover:text-brand-accent transition flex items-center gap-2"><i class="fa-solid fa-calculator text-xs"></i> Tax & Audit (CA)</a></li>
+                    <li><a href="#" class="hover:text-brand-accent transition flex items-center gap-2"><i class="fa-solid fa-passport text-xs"></i> Visa & Immigration</a></li>
+                    <li><a href="#" class="hover:text-brand-accent transition flex items-center gap-2"><i class="fa-solid fa-briefcase text-xs"></i> Corporate Strategy</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="text-white font-semibold mb-6 text-lg">Newsletter</h4>
+                <p class="text-sm mb-4">Subscribe to get updates on new services and expert insights.</p>
+                <form class="mb-6">
+                    <div class="flex">
+                        <input type="email" 
+                               placeholder="Your email" 
+                               class="flex-1 px-4 py-3 bg-slate-800 border border-slate-700 rounded-l-lg text-white text-sm focus:outline-none focus:border-brand-accent">
+                        <button type="submit" 
+                                class="px-4 py-3 bg-brand-accent hover:bg-cyan-500 text-white font-medium rounded-r-lg transition">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+                <p class="text-xs text-slate-500">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+
+        <div class="container mx-auto px-6 border-t border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm">
+            <p>&copy; 2023 Justpedia.us. All rights reserved.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition">Terms of Service</a>
+                <a href="#" class="hover:text-white transition">Cookie Policy</a>
+                <a href="#" class="hover:text-white transition">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="fixed bottom-8 right-8 w-12 h-12 bg-brand-accent text-white rounded-full flex items-center justify-center text-xl shadow-lg hover:bg-cyan-500 transition-all duration-300 transform hover:scale-110 z-40">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+</body>
+</html>
